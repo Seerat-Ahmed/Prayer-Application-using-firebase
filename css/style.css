@@ -4,3 +4,13 @@
 .row {
     margin: 0;
 }
+my-nav a { 
+    color: white !important;
+}
+my-nav img {
+    height: 60px;
+}
+.form-inline button{
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
