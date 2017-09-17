@@ -1,0 +1,118 @@
+/* *********************************************** */
+/* ********** Posts and commnt styling  ********** */
+/* *********************************************** */
+
+.post {
+    margin: 10px 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    padding: 15px;   
+    border-radius: 5px;
+}
+
+.post-header{
+    margin-bottom: 10px;
+}
+
+.post-header> .sender-name {
+    display: inline-block;
+    width: 60%;
+    font-size: 20px;
+    text-align: left;
+}
+
+.post-header> .post-date {
+    width: 32%;
+    display: inline-block;
+    color: #757575;
+    text-align: right;    
+}
+
+.post-header> .dropdown {
+    width: 5%;
+    display: inline-block;
+    color: #757575;
+    text-align: right;    
+}
+
+.post-drop-item {
+    padding-left: 6px;
+}
+
+.post-content {
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.post-like-icon a:hover{
+    color: red !important;
+    text-decoration: none;
+}
+
+.post-comment-icon a:hover {
+    color: burlywood !important;
+    text-decoration: none;
+}
+
+
+.post-footer { 
+     padding-top: 10px;
+     padding-bottom: 10px;
+}
+
+.horizon {
+    width: 100%;
+    display: block;
+    text-align: center;
+    height: 1px;
+    background-color: #e3e3e3;
+}
+
+.comment-section {
+    background-color: #f4f4f4;
+    display: none;
+}
+
+.post-a-comment {
+    padding: 10px 0;
+}
+
+.post-a-comment .col-md-1 {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.post-a-comment input {
+    width: 100%;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    padding: 10px;
+}
+
+.post-a-comment .col-md-10 {
+    padding: 0;
+}
+
+.post-a-comment i {
+    text-align: center;
+}
+
+.post-comment {
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.post-comment h3 {
+    font-size: 17px;
+}
+
+.post-comment p {
+    font-size: 15px;
+}
+.fa-heart {
+    color: red !important;
+}
+
+.fa-comment {
+    color: burlywood;
+}

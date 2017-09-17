@@ -1,0 +1,27 @@
+/* ***************************************** */
+/* **********  Styling write post ********** */
+/* ***************************************** */
+
+textarea {
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+.post-buttons {
+    width: 100%;
+    text-align: right;
+    background-color: #007bff;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+.post-buttons > button {
+    margin-left: 10px;
+}

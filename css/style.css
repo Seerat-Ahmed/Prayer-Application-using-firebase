@@ -1,16 +1,29 @@
+body {
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
 .container {
     padding: 0;
 }
+
 .row {
     margin: 0;
 }
+
 my-nav a { 
     color: white !important;
 }
+
 my-nav img {
     height: 60px;
 }
+
 .form-inline button{
     color: #ffffff !important;
     border-color: #ffffff !important;
+}
+
+button {
+    margin-left: 10px;
 }
