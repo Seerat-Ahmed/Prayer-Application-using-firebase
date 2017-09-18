@@ -7,7 +7,7 @@
 const postPray = document.getElementById('post-pray');
 const postBody = document.getElementById('post-body');
 const postCancel = document.getElementById('post-cancel');
-const dbRef = firebase.database().ref('/');
+var dbRef = firebase.database().ref('/');
 var auth = firebase.auth();
 
 
@@ -45,19 +45,26 @@ postPray.addEventListener('click', () => {
     let user = firebase.auth().currentUser;
 
     if (user != null) {//if successfully got user uid
-        try {
+        if(postBody.value != ""){
             //Posting to the database
-            dbRef.child('post').push({
-                milli: new Date().getMilliseconds(),//Get milliseconds which can be used in sorting
-                name: user.displayName,//Get user name
-                uid: user.uid,//Get user uid
-                email: user.email,//Get user email
-                postBody: postBody.value,//get post body
-                date: getCurrentDate()//get current date  - 'month date, year'
+        dbRef.child('post').push().setWithPriority({
+            milli: new Date().getMilliseconds(),//Get milliseconds which can be used in sorting
+            name: user.displayName,//Get user name
+            uid: user.uid,//Get user uid
+            email: user.email,//Get user email
+            postBody: postBody.value,//get post body
+            date: getCurrentDate()//get current date  - 'month date, year'
+        }, 0 - Date.now())
+            .then(user => {
+                postBody.value = "";
+                console.log('Successfully Posted');
+            })
+            .catch(error => {
+                console.log('Failed to post the post to database');
             });
-
-        } catch (error) {
-            console.log(error);
+        }
+        else{
+            console.log('Please write Something')
         }
     }
 });
