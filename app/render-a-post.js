@@ -1,17 +1,9 @@
 var postRef = firebase.database().ref('/').child('post');
+var postSection = document.getElementById('post-section');
 
 
-    // dbRef.on('child_added', snapshot => {
-    //     console.log('Normal : ' + snapshot.val());
-    // });
-
-// postRef.on('child_added', snapshot => {
-//     let obj = snapshot.val();
-//     console.log('Descending : ' + obj);
-// });
-
-
-// firebase.database().ref('/').child('post').on('child_added', function(fbdata) {
-//     console.log(fbdata.exportVal());
-//   })
-
+postRef.on('child_added', snapshot => {
+    let obj = snapshot.exportVal();
+    let key = snapshot.key;
+    postSection.innerHTML += RenderPost(key, obj);
+});

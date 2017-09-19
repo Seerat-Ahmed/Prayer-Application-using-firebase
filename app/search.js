@@ -11,15 +11,18 @@ searchButton.addEventListener('click', () => {
     //Getting search bar text
     let searchBarText = searchBar.value;
     //Getting user name references
-    let nameRef = firebase.database().ref('/').child('post').orderByChild('name');
+    let nameRef = firebase.database().ref('/').child('post').orderByValue('.priority');
     //Checking whether the search input field is emplty or not
     if (searchBarText != "" && searchBarText != null) {
-        let data = nameRef.startAt(searchBarText);
+        let data = nameRef.equalTo(searchBarText);
         data.on('child_added', snapshot => {
 
-            console.log(snapshot.val());
+            console.log(snapshot.exportVal());
 
         });
+    }
+    else {
+        console.log('Nothing to search');
     }
 
 });

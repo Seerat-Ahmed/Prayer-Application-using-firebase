@@ -24,15 +24,15 @@ const navigationTemplate =
                     
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input id="search"class="form-control mr-sm-2" type="text" placeholder="Search by email" aria-label="Search">
+            <div class="form-inline my-2 my-lg-0">
+                <input id="search"class="form-control mr-sm-2" type="text" placeholder="Search by name" aria-label="Search">
                 <button id="search-btn" class="btn btn-outline-primary my-2 my-sm-0" type="submit">
                     Search
                 </button>
                 <button id="log-out" class="btn btn-secondary">
                     Logout
                 </button>
-            </form>
+            </div>
         </div>
     </nav>`;
 
